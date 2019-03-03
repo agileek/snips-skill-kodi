@@ -1,0 +1,10 @@
+[secret]
+# MQTT
+mqtt_host=localhost
+mqtt_port=1883
+#mqtt_username=
+#mqtt_password=
+upnp_address=http://my-kodi-ip:8080/jsonrpc
+
+# Device Info
+site_id=default
