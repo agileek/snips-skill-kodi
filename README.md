@@ -1,5 +1,5 @@
 # Snips UPNP forward
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/agileek/snips-skill-upnp/master/LICENSE.txt)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/agileek/snips-skill-kodi/master/LICENSE.txt)
 
 This is a Snips action written in Python and is compatible with `snips-skill-server`.
 This action forwards any sound played locally on any UPNP server (KODI,...) .
@@ -9,7 +9,7 @@ This action forwards any sound played locally on any UPNP server (KODI,...) .
 ### SAM (preferred)
 To install the action on your device, you can use [Sam](https://snips.gitbook.io/getting-started/installation)
 
-`sam install action -g https://github.com/agileek/snips-skill-upnp.git`
+`sam install action -g https://github.com/agileek/snips-skill-kodi.git`
 
 ### Manually
 
@@ -21,7 +21,7 @@ You'll need `snips-skill-server` installed on the pi
 Stop snips-skill-server & generate the virtual environment
 ```
 sudo systemctl stop snips-skill-server
-cd /var/lib/snips/skills/snips-skill-upnp/
+cd /var/lib/snips/skills/snips-skill-kodi/
 sh setup.sh
 sudo systemctl start snips-skill-server
 ```
