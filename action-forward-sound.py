@@ -30,8 +30,8 @@ def on_connect(client, userdata, flags, rc):
 
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe(f"hermes/hotword/{site_id}/detected")
-    # client.subscribe(f"hermes/audioServer/{site_id}/audioFrame")
+    client.subscribe("hermes/hotword/" + site_id + "/detected")
+    # client.subscribe("hermes/audioServer/" + site_id + "/audioFrame")
     client.subscribe("hermes/dialogueManager/sessionEnded")
 
 
@@ -46,9 +46,9 @@ def on_message(client, userdata, msg):
         if "reference" not in current_cast:
             current_cast["reference"] = subprocess.Popen(cast_cmd, shell=True)
     if msg.topic == "hermes/dialogueManager/sessionEnded":
-        print(f"stopping sound forward")
-        print(f"stopping sound forward {current_cast}")
+        print("stopping sound forward")
         if "reference" in current_cast:
+            print("Really stopping sound forward")
             current_cast["reference"].terminate()
             del(current_cast["reference"])
 

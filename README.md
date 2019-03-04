@@ -9,7 +9,7 @@ This action forwards any sound played locally on any UPNP server (KODI,...) .
 ### SAM (preferred)
 To install the action on your device, you can use [Sam](https://snips.gitbook.io/getting-started/installation)
 
-`sam install action -g https://github.com/agileek/snips-skill-kodi.git`
+`sam install actions -g https://github.com/agileek/snips-skill-kodi.git`
 
 ### Manually
 
