@@ -43,6 +43,7 @@ def on_message(client, userdata, msg):
         time.sleep(.500)
         kodi.Player.Open({"item": {"file": "http://" + SERVER_IP + ":8089/" + socket.gethostname() + "?action=play_video"}})
         print("forwarding sound")
+        print(cast_cmd)
         if "reference" not in current_cast:
             current_cast["reference"] = subprocess.Popen(cast_cmd, shell=True)
     if msg.topic == "hermes/dialogueManager/sessionEnded":
